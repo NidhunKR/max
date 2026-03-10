@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Max Beauty Parlour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#home">Max Beauty Parlour</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+        ☰
+      </button>
+      <nav id="mainNav">
+        <a href="#services">Services</a>
+        <a href="#booking">Book</a>
+        <a href="#shop">Shop</a>
+        <a href="#gallery">Looks</a>
+        <a href="#posts">Beauty Posts</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div>
+          <p class="badge">Indian Luxury Makeup Studio</p>
+          <h1>Radiant Looks for Every Indian Celebration</h1>
+          <p>
+            Book expert makeup services, discover premium beauty products, and
+            get inspired by modern and traditional Indian beauty trends.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#booking">Book Your Slot</a>
+            <a class="btn btn-outline" href="#shop">Explore Products</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Today’s Highlights</h3>
+          <ul>
+            <li>✨ Bridal Signature Package</li>
+            <li>🛍️ New Velvet Matte Collection</li>
+            <li>💄 Skin-tone Match Consultation</li>
+            <li>🌸 Haldi, Mehendi & Reception Looks</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="section-head">
+          <p class="badge">Our Services</p>
+          <h2>Professional Makeup for Every Occasion</h2>
+        </div>
+        <div id="servicesGrid" class="card-grid"></div>
+      </section>
+
+      <section id="booking" class="section split">
+        <div>
+          <p class="badge">Book Appointment</p>
+          <h2>Choose Service & Date</h2>
+          <p>
+            Select a makeup service, pick your preferred date, and reserve your
+            beauty session instantly.
+          </p>
+          <form id="bookingForm" class="booking-form">
+            <label>
+              Full Name
+              <input type="text" id="name" required />
+            </label>
+            <label>
+              Service
+              <select id="serviceSelect" required></select>
+            </label>
+            <label>
+              Appointment Date
+              <input type="date" id="appointmentDate" required />
+            </label>
+            <label>
+              Preferred Time
+              <select id="timeSlot" required>
+                <option value="">Select time</option>
+                <option>10:00 AM</option>
+                <option>12:30 PM</option>
+                <option>3:00 PM</option>
+                <option>6:00 PM</option>
+              </select>
+            </label>
+            <button class="btn btn-primary" type="submit">Confirm Booking</button>
+          </form>
+          <p id="bookingMessage" class="message"></p>
+        </div>
+        <aside class="feature-panel">
+          <h3>New Features</h3>
+          <ul>
+            <li>📅 Smart calendar blocks unavailable dates.</li>
+            <li>🎯 Personalized look recommender for your skin tone.</li>
+            <li>🎁 Loyalty points with every service and purchase.</li>
+            <li>🚚 Same-day delivery on selected products.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="shop" class="section">
+        <div class="section-head">
+          <p class="badge">Shop Products</p>
+          <h2>Beauty Essentials & Premium Makeup</h2>
+        </div>
+
+        <div class="shop-toolbar">
+          <input
+            id="productSearch"
+            type="search"
+            placeholder="Search product by name or category..."
+            aria-label="Search products"
+          />
+          <select id="categoryFilter" aria-label="Filter category">
+            <option value="all">All Categories</option>
+          </select>
+        </div>
+
+        <div id="productsGrid" class="card-grid"></div>
+      </section>
+
+      <section id="gallery" class="section">
+        <div class="section-head">
+          <p class="badge">Beauty Looks Gallery</p>
+          <h2>Gorgeous Makeup Inspiration</h2>
+        </div>
+        <div id="galleryGrid" class="gallery-grid"></div>
+      </section>
+
+      <section id="posts" class="section">
+        <div class="section-head">
+          <p class="badge">Beauty Posts</p>
+          <h2>Tips, Trends & Expert Advice</h2>
+        </div>
+        <div id="postsGrid" class="card-grid"></div>
+      </section>
+
+      <section id="pricing" class="section">
+        <div class="section-head">
+          <p class="badge">Pricing</p>
+          <h2>Popular Product Pricing</h2>
+        </div>
+        <table class="pricing-table" id="pricingTable">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section id="testimonials" class="section">
+        <div class="section-head">
+          <p class="badge">Testimonials</p>
+          <h2>What Our Clients Say</h2>
+        </div>
+        <div id="testimonialsGrid" class="card-grid"></div>
+      </section>
+
+      <section id="about" class="section about">
+        <p class="badge">About Us</p>
+        <h2>Max Beauty Parlour</h2>
+        <p>
+          Max Beauty Parlour is an Indian beauty destination dedicated to helping
+          every client feel radiant. Our artists combine luxury products, modern
+          techniques, and personal consultations to craft perfect looks for
+          bridal, party, editorial, and daily glam.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Max Beauty Parlour · Beauty with confidence.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
